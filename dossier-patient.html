@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Accueil - North Health</title>
+  <link rel="stylesheet" href="style-dossier.css"/>
+  <!--bootstrap-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<script src="..\North Health - web\script.js"></script>
+</head>
+
+
+<body>
+	<!-- HEADER -->
+	<header>
+		<h1>North Health</h1>
+	</header>
+
+	<!--------------- ONGLET INFOS PERSOS--------------->
+	<div class="tab">
+		<button class="tablinks active" onclick="openTab(event, 'infos-personnelles')"  style="border-right:1px black solid;">Infos personnelles</button>
+		<button class="tablinks" onclick="openTab(event, 'infos-medicales')">Infos médicales</button>
+	</div>
+	
+
+	<!-- PHOTO DE PROFIL -->
+		<label for="file-input" class="espace-photo">
+			<img src="image-profil.jpg" alt="Profile picture">
+			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-upload" viewBox="0 0 16 16">
+				<path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+				<path d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708l3-3z"/>
+			</svg>
+		</label>
+		<input id="file-input" type="file" accept="image/*" style="display: none;">
+
+
+	<!-- FORMULAIRE -->	
+	<div id="infos-personnelles" class="tabcontent">
+		<form>
+			<label for="nom-prenom">Nom et prénom</label>
+			<input type="text" id="nom-prenom" name="nom-prenom" required>
+
+			<label for="date-naissance">Date de naissance</label>
+			<input type="date" id="date-naissance" name="date-naissance" required>
+
+			<label for="email">Email</label>
+			<input type="email" id="email" name="email" required>
+
+			<label for="telephone">Téléphone</label>
+			<input type="tel" id="telephone" name="telephone" required>
+			
+			<label for="adresse">Adresse</label>
+			<input type="text" id="adresse" name="adresse" required>
+
+			<label for="code-postal">Code postal</label>
+			<input type="text" id="code-postal" name="code-postal" required>
+
+			<label for="ville">Ville</label>
+			<input type="text" id="ville" name="ville" required>
+
+			<label for="personne-a-contacter">Personne à contacter</label>
+			<input type="text" id="personne-a-contacter" name="personne-a-contacter" required>
+
+			<!--<input type="submit" value="Enregistrer">-->
+		</form>
+	</div>
+	
+	<!--------------- ONGLET INFOS MEDICALES --------------->
+	<div id="infos-medicales" class="tabcontent">
+		<form>
+			<label for="secu">Numéro de sécurité sociale</label>
+			<input type="text" id="secu" name="secu" required>
+
+			<label for="regime">Régime d'assurance maladie</label>
+			<select id="regime" name="regime">
+				<option value="general">Régime général</option>
+				<option value="independant">Régime des indépendants</option>
+				<option value="agricole">Régime agricole</option>
+				<option value="autre">Autre</option>
+				</select>
+				<label for="medecin">Médecin traitant</label>
+				<input type="text" id="medecin" name="medecin" required>
+	
+				<label for="mutuelle">Mutuelle</label>
+				<input type="text" id="mutuelle" name="mutuelle" required>
+	
+				<!--<input type="submit" value="Enregistrer">-->
+			</form>
+		</div>
+	</div>
+	
+	<!-- MENU DU BAS -->
+	<div class="bottom-menu">
+		<a href="#" class="active">Dossier</a>
+		<a href="rendez-vous.html">Rendez-vous</a>
+		<a href="alarme.html">Alarmes<Alarmes</a>
+		<a href="options.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+			<path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
+			<path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"/>
+		</svg></a>
+	</div>
+
+
+	<script>
+		function openTab(evt, tabName) {
+	// Get all elements with class="tabcontent" and hide them
+	var tabcontent = document.getElementsByClassName("tabcontent");
+	for (var i = 0; i < tabcontent.length; i++) {
+		tabcontent[i].style.display = "none";
+	}
+
+	// Get all elements with class="tablinks" and remove the class "active"
+	var tablinks = document.getElementsByClassName("tablinks");
+	for (var i = 0; i < tablinks.length; i++) {
+		tablinks[i].className = tablinks[i].className.replace(" active", "");
+	}
+
+	// Show the current tab, and add an "active" class to the button that opened the tab
+	document.getElementById(tabName).style.display = "block";
+	evt.currentTarget.className += " active";
+}
+
+document.getElementsByClassName("tablinks")[0].click(); // Activate the first tab on page load
+	</script>
+
+
+</body>
+</html>
+	

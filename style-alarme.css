@@ -1,0 +1,151 @@
+@media only screen and (max-width: 767px) {
+
+
+/* HEADER */
+header {
+  text-align: center;
+	padding-top:3%;
+	padding-bottom:3%;
+	border-bottom:2px solid black;
+	background-color:#929292;
+}
+
+h2{
+	padding-top:5%;
+	text-align: center;
+}
+
+/* JOURS ET HEURES */
+table {
+	border-collapse: collapse;
+	margin:auto;
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+tbody{
+	display:grid;
+	row-gap:4px;
+}
+
+td {
+	padding-top: 5px;
+	padding-bottom:5px;
+	padding-left:20px;
+	padding-right:20px;
+	font-size: 13px;
+	width:100px;
+}
+
+td.jours{
+	background-color: #f0efef;
+	border-radius: 18px 0px 0px 18px;
+	text-align: center;
+}
+
+td.heures{
+	cursor: pointer;
+	background-color: #f8f8f8;
+	text-align: center;
+	border-radius: 0px 18px 18px 0px;
+}
+
+
+
+/* SWITCH */
+
+.centrer{
+	text-align: center;
+}
+label.switch {
+	display: inline-block;
+	position: relative;
+	margin-top: 8%;
+	width: 60px;
+	height: 34px;
+}
+label.switch input[type="checkbox"] {
+	display: none;
+}
+label.switch .slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #CCC;
+	transition: .4s;
+	border-radius: 34px;
+}
+label.switch .slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	transition: .4s;
+	border-radius: 50%;
+}
+input:checked + .slider {
+	background-color: #2196F3;
+}
+input:checked + .slider:before {
+	transform: translateX(26px);
+}
+.time-picker {
+	display: none;
+	margin-top: 10px;
+}
+.time-picker label {
+	margin-right: 10px;
+}
+.time-picker input {
+	width: 50px;
+	margin-right: 10px;
+}
+.active {
+	background-color: #DDD;
+}
+
+
+/* BARRE DU BAS */
+.bottom-menu {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-color: #929292;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	box-sizing: border-box;
+	padding: 10px;
+	border-top:2px solid black;
+}
+.bottom-menu a {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 15px;
+	font-weight: 600;
+	text-align: center;
+	flex-grow: 1;
+	padding: 10px 0;
+}
+.bottom-menu a.active {
+	color: rgb(255, 255, 255);
+	background-color: #414141;
+}
+.bottom-menu svg {
+	width:55%;
+	height:55%;
+}
+
+}
